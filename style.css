@@ -4,9 +4,10 @@
   box-sizing: border-box;
 }
 
-:root{
+:root {
   --max-width: 1120px;
   --fixed-width: 600px;
+  --fluid-width: 90vw;
 }
 
 body {
@@ -30,12 +31,134 @@ body::after {
   z-index: -1;
 }
 
-header {
+/* header {
   display: flex;
   justify-content: space-between;
   padding: 25px;
+} */
+
+nav {
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+.nav-center {
+  width: 95vw;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
 .icon {
   color: #fff;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.6);
+  /* background: transparent; */
+  font-size: 3rem;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.nav-menu-1 {
+  /* padding: 0.8rem 1.2rem; */
+  /* padding: 14px  14px 24px; */
+  border-radius: 0.8rem;
+  background-color: #ffff;
+  border: gray;
+  gap: 0.85rem;
+}
+
+.nav-menu-1 p {
+  color: #353535;
+  font-weight: 600;
+  transition: color 0.3s, opacity 0.3s;
+  cursor: pointer;
+  padding: 14px 0 14px 24px;
+}
+.nav-menu-1 p:nth-last-of-type(1) {
+  padding: 14px 24px;
+}
+.nav-menu-1 p:hover {
+  color: #353535;
+  opacity: 0.7;
+}
+
+#register {
+  color: #f1f1f1;
+  background-color: #353535;
+  margin: 2px;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.4rem;
+}
+
+section {
+  display: grid;
+  grid-template-columns: 2fr 4fr 1fr;
+  margin: 0 auto;
+  width: var(--fluid-width);
+  max-width: 100rem;
+  height: 80%;
+}
+.section-left-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#section-left {
+  background-color: #f1f1f1;
+  border-radius: 0.8rem;
+  opacity: 0.75;
+  width: 20rem;
+}
+
+.section-left-container {
+  padding: 18px 24px;
+}
+
+.icon-container {
+  background: black;
+  width: 50px;
+  height: 50px;
+
+  border-radius: 1.12rem;
+  /* padding: 10px;  */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon-1 {
+  color: #fff;
+}
+
+.section-left-text-1 {
+  margin: 2rem 0 2rem 0;
+  font-size: 2.5rem;
+}
+
+.section-left-text-2 {
+  font-size: 1.5rem;
+  color: #0f0f0f;
+}
+.section-left-text-2 a {
+  text-decoration: underline;
+}
+
+.section-left-button {
+  width: 100%;
+  margin: 2rem 0 0.75rem 0;
+  padding: 15px 20px;
+  background-color: #004bff;
+  color: #f1f1f1;
+  border-radius: 0.8rem;
+  border: none;
+  font-size: 1.2rem;
+}
+
+.section-right-container h1{
+color: #f1f1f1;
+font-size: 2rem;
 }
