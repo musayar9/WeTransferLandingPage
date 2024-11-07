@@ -4,12 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 
 <body>
     <!-- Header alanı -->
+
     <nav>
         <div class="nav-center">
             <div>
@@ -27,13 +31,34 @@
                 <!-- Navbar Detail -->
                 <div class="nav-menu nav-menu-1">
 
-                    <div>
-                        <!-- Özellikler -->
-                        <p>Özellikler</p>
+                    <div class="dropdown">
+                        <span>Özellikler</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                        <div class="dropdown-content">
+                            <ul>
+                                <li>test</li>
+                                <li>test</li>
+                                <li>test</li>
+                                <li>test</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div>
+                    
+                    <div class="dropdown">
+                        <span>Fiyatlandırma</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                        <div class="dropdown-content">
+                            <ul>
+                                <li>test</li>
+                                <li>test</li>
+                                <li>test</li>
+                                <li>test</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- <div>
                         <p>Fiyatlandırma</p>
-                    </div>
+                    </div> -->
                     <div>
                         <p>Örnekleri Kullanın</p>
                     </div>
@@ -49,6 +74,7 @@
                     <p id="register">Kaydol</p>
                 </div>
             </div>
+
         </div>
 
     </nav>
@@ -79,8 +105,49 @@
 
         <div class="section-right-wrapper">
             <div class="section-right-container">
-            <h1>WeTransfer'e Hoşgeldiniz</h1>
+                <h1>WeTransfer'e Hoşgeldiniz</h1>
+                <p class="section-right-text-1">Fikir Transferi ile<b>dünyayı değiştirin</b></p>
+                <div class="right-text-container">
+                    <p>
+                        Çerezlerimizi kabul ederek, gezegene verdiğimiz vaadimizin kapsamını genişletmemize doğrudan
+                        yardımcı olabilirsiniz.
+                        WeTransfer olarak sadece bu yıl içinde 175.000'den fazla ağaç dikmeyi taahhüt ettik ve daha yeni
+                        başlıyoruz. Sadece
+                        ödüllü reklamlarımızı deneyimleyerek olumlu bir etki yaratabilirsiniz.
+                    </p>
+
+
+                    <p>
+                        Sitemizin çalışmasını sağlamak, trafiği analiz etmek ve hizmetlerimizi geliştirmek için gerekli
+                        olan
+                        çerezleri ve diğer
+                        teknolojileri kullanıyoruz. Gizlilik Bildirimimizi okuyarak daha fazla bilgi edinebilirsiniz.
+                        "Tümünü kabul et"
+                        seçeneğine tıklayarak, bize ve 61 satıcılarımıza cihazınızdaki bilgileri saklamamıza ve/veya
+                        cihazınızdaki bilgilere
+                        erişmemize ve web sitelerimiz ve uygulamalarımız içinde ve dışında kişiselleştirilmiş reklam ve
+                        içerik sunmak için IP
+                        adresi gibi kişisel verilerinizi kullanmamıza ve reklamların ve içeriğin etkinliğini ölçmemize,
+                        hedef kitle araştırması
+                        yaparak hizmetler geliştirmemize izin vermiş olursunuz. "Tümünü reddet" seçeneğine tıklayarak
+                        izni
+                        reddedebilirsiniz.
+                    </p>
+                    <p>
+                        Bu amaçlar ve ortaklarımız hakkında daha fazla bilgi edinmek veya tercihlerinizi uygulamak için
+                        aşağıdaki "Tercihleri
+                        Yönet" düğmesine tıklayın. Bu seçimler ortaklarımıza iletilecek ve tarama deneyiminizi
+                        etkilemeyecektir. Gizlilik
+                        Merkezini ziyaret ederek istediğiniz zaman izni geri çekebilirsiniz.</p>
+                </div>
+                <div class="right-button-container">
+                    <button class="button-1">Tümünü Kabul Et</button>
+                    <button class="button-2">Tümünü Reddet</button>
+                    <button class="button-3">Tercihleri Yönet</button>
+
+                </div>
             </div>
+
 
         </div>
     </section>
