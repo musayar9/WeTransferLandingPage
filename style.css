@@ -87,7 +87,8 @@ body::after {
   padding: 14px 24px;
 }
 
-.dropdown {
+.dropdown,
+.dropdown-mobile {
   position: relative;
   display: inline-block;
 }
@@ -106,12 +107,16 @@ body::after {
   opacity: 0.7;
 }
 
-.dropdown-content {
+.dropdown-content,
+.dropdown-mobile-content {
   display: none;
   position: absolute;
 }
 
 .dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown-mobile.mobile-active .dropdown-mobile-content {
   display: block;
 }
 
@@ -174,9 +179,9 @@ body::after {
   padding: 8px 10px;
 }
 
-.source-lists ul li h5 {
+.text-blue {
+  font-size: 0.875rem;
   color: #5268ff;
-  font-size: 0.8rem;
 }
 
 .source-lists ul li a {
@@ -385,8 +390,7 @@ section {
     z-index: 1;
     transition: all 0.3s;
     max-height: 80vh;
-overflow-y: auto;
-
+    overflow-y: auto;
   }
 
   .mobile-nav-menu-items {
@@ -397,35 +401,27 @@ overflow-y: auto;
     font-size: 0.875rem;
     color: #353535;
     transition: 0.3s all;
-   
   }
 
-.mobile-menu-content{
-padding: 10px 12px;
-}
+  .mobile-menu-content {
+    padding: 10px 12px;
+  }
 
   .mobile-nav-menu-lists {
     display: none;
-    
   }
 
   .mobile-nav-menu-area.active .mobile-nav-menu-lists {
     display: block;
-
   }
-
 
   .mobile-nav-menu-lists li {
     font-size: 0.875rem;
     padding: 10px 0px;
   }
-    .mobile-nav-menu-lists li a:hover {
+  .mobile-nav-menu-lists li a:hover {
     color: #353535;
     opacity: 0.7;
-  }
-    .mobile-nav-menu-lists li h5{
-    font-size: 0.875rem;
-    color:#5268ff;
   }
 
   .icon {
