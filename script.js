@@ -1,5 +1,19 @@
-function toggleMenu(index) {
-  // Tüm `mobile-nav-menu-area` öğelerini seçin
+function dropdownMenu() {
+  const dropdownMobile = document.querySelector(".dropdown-mobile");
+  const iconThree = document.querySelector(".icon-3");
+  dropdownMobile.classList.toggle("mobile-active");
+  if (dropdownMobile.classList.contains("mobile-active")) {
+    iconThree.classList.add("fa-xmark");
+    iconThree.classList.remove("fa-bars");
+  } else {
+    iconThree.classList.remove("fa-xmark");
+    iconThree.classList.add("fa-bars");
+  }
+}
+
+function toggleMenu(index, event) {
+  event.stopPropagation();
+
   const menuAreas = document.querySelectorAll(".mobile-nav-menu-area");
 
   menuAreas.forEach((menuArea) => {
@@ -26,15 +40,15 @@ function toggleMenu(index) {
   });
 }
 
-function dropdownMenu() {
+document.addEventListener("click", (event) => {
   const dropdownMobile = document.querySelector(".dropdown-mobile");
   const iconThree = document.querySelector(".icon-3");
-  dropdownMobile.classList.toggle("mobile-active");
-  if (dropdownMobile.classList.contains("mobile-active")) {
-    iconThree.classList.add("fa-xmark");
-    iconThree.classList.remove("fa-bars");
-  } else {
+  if (
+    dropdownMobile.classList.contains("mobile-active") &&
+    !dropdownMobile.contains(event.target)
+  ) {
+    dropdownMobile.classList.remove("mobile-active");
     iconThree.classList.remove("fa-xmark");
     iconThree.classList.add("fa-bars");
   }
-}
+});

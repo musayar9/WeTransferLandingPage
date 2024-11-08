@@ -85,6 +85,12 @@ body::after {
 
 .nav-desktop-menu-1 .dropdown:nth-last-of-type(1) {
   padding: 14px 24px;
+  display: none;
+}
+
+#sources {
+  display: block;
+  padding: 14px 24px;
 }
 
 .dropdown,
@@ -111,6 +117,7 @@ body::after {
 .dropdown-mobile-content {
   display: none;
   position: absolute;
+  z-index: 1;
 }
 
 .dropdown:hover .dropdown-content {
@@ -352,9 +359,48 @@ section {
   text-decoration: underline;
 }
 
+@media (min-width: 768px) and (max-width: 992px) {
+  .nav-desktop-menu {
+    gap: 0.65rem;
+  }
+
+  /* Medium ekranlar için özel stiller buraya */
+  #sources,
+  #examples_use {
+    display: none;
+  }
+
+  .nav-desktop-menu-1 .dropdown:nth-last-of-type(1) {
+    padding: 14px 24px;
+    display: block;
+  }
+
+  .source-lists {
+    left: -18rem;
+    width: 38rem;
+  }
+
+  #section-left {
+    width: 15rem;
+  }
+    .button-1 {
+  padding: 10px 15px;
+
+  font-size: 0.75rem;
+}
+
+.button-2 {
+
+  padding: 10px 15px;
+
+  font-size: 0.75rem;
+
+}
+}
+
 @media (max-width: 768px) {
   body {
-    height: 100vh; /* Ensures the body covers the full viewport height */
+    height: 100vh;
     overflow: hidden; /* Prevents scrollbars from appearing */
   }
 
@@ -367,6 +413,9 @@ section {
     background-attachment: fixed; /* Keeps the image fixed on mobile */
   }
   #nav-desktop {
+    display: none;
+  }
+  #more_data {
     display: none;
   }
 
@@ -438,7 +487,7 @@ section {
   }
   #section-left {
     opacity: 0.85;
-    z-index: -1;
+    /* z-index: -1; */
   }
 
   .section-right-wrapper {
