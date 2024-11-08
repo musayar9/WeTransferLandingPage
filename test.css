@@ -34,18 +34,14 @@ body::after {
   z-index: -1;
 }
 
-#nav-desktop {
+nav {
   height: 6rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-#nav-mobile {
-  display: none;
-}
-
-.nav-desktop-center {
+.nav-center {
   width: 95vw;
   max-width: 100%;
   display: flex;
@@ -57,24 +53,24 @@ body::after {
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.6);
 }
 
-.nav-desktop-menu {
+.nav-menu {
   display: flex;
   align-items: center;
   gap: 0.85rem;
 }
 
-.nav-desktop-menu-1 {
+.nav-menu-1 {
   border-radius: 0.8rem;
   background-color: #ffff;
   gap: 0.85rem;
 }
 
-.nav-desktop-menu-1 p {
+.nav-menu-1 p {
   padding: 14px 0 14px 24px;
   font-size: 0.875rem;
 }
 
-.nav-desktop-menu-1 .dropdown:nth-last-of-type(1) {
+.nav-menu-1 .dropdown:nth-last-of-type(1) {
   padding: 14px 24px;
 }
 
@@ -202,7 +198,6 @@ section {
   padding: 2rem;
   width: var(--fluid-width);
   max-width: 100rem;
-  margin: 0 auto;
 }
 
 .section-left-wrapper {
@@ -263,7 +258,7 @@ section {
 
 .section-right-wrapper {
   height: 80vh;
-  overflow-y: auto;
+  overflow-y: auto; 
   scrollbar-width: none;
 }
 .section-right-wrapper::-webkit-scrollbar {
@@ -337,51 +332,6 @@ section {
   text-decoration: underline;
 }
 
-@media (max-width: 768px) {
-  body {
-    height: 100vh; /* Ensures the body covers the full viewport height */
-    overflow: hidden; /* Prevents scrollbars from appearing */
-  }
-  #nav-desktop {
-    display: none;
-  }
-
-#nav-mobile {
-  background-color: #f1f1f1;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.5rem 1rem;
-}
 
 
-
-/* Menü ikonu ve WeTransfer logosu */
-.icon {
-  color: #0f0f0f;
-  font-size: 24px;
-  margin-left: 0.8rem;
-}
-
-
-  section {
-    grid-template-columns: 1fr;
-    width: 100%;
-    max-width: 100%;
-    justify-items: center;
-    padding: 1rem; /* Kenarlık alanını azalt */
-  }
-
-  .section-right-wrapper {
-    display: none;
-  }
-
-  body::after {
-    background-image: url(./images/forest.jpeg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0.35;
-    background-attachment: fixed; /* Keeps the image fixed on mobile */
-  }
-}
+@media (max-width: 767px) { }

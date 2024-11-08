@@ -14,8 +14,11 @@
 <body>
     <!-- Header alanı -->
 
-    <nav>
-        <div class="nav-center">
+
+    <!-- Nav Desktop -->
+
+    <nav id="nav-desktop">
+        <div class="nav-desktop-center">
             <div>
                 <!-- WeTransfer Icons -->
                 <a href="https://wetransfer.com/" title="WeTransfer.com">
@@ -27,9 +30,9 @@
                 </a>
 
             </div>
-            <div class="nav-menu">
+            <div class="nav-desktop-menu">
                 <!-- Navbar Detail -->
-                <div class="nav-menu nav-menu-1">
+                <div class="nav-desktop-menu nav-desktop-menu-1">
 
                     <div class="dropdown">
                         <span>Özellikler</span>
@@ -93,7 +96,7 @@
                                         <h5>HAKKIMIZDA</h5>
                                     </li>
                                     <li>
-                                        <a href="https://wetransfer.com/explore/photographers?sp=false">Şirket
+                                        <a href="https://wetransfer.com/explore">Şirket
                                         </a>
                                     </li>
                                     <li><a href="https://wetransfer.com/explore/videographers?sp=false">Kariyer</a>
@@ -101,11 +104,11 @@
                                     <li><a
                                             href="https://wetransfer.com/explore/designers-illustrators?sp=false">Kültür</a>
                                     </li>
-                                    <li><a href="https://wetransfer.com/explore/for-students?sp=false">Liderlik</a></li>
-                                    <li><a href="https://wetransfer.com/explore/for-students?sp=false">Şirket Toplumsal
+                                    <li><a href="https://wetransfer.com/explore/corporate/leadership">Liderlik</a></li>
+                                    <li><a href="https://wetransfer.com/explore/csr">Şirket Toplumsal
                                             sorumluluğu</a></li>
-                                    <li><a href="https://wetransfer.com/explore/for-students?sp=false">Ödüller</a></li>
-                                    <li><a href="https://wetransfer.com/explore/for-students?sp=false">Haber Odası</a>
+                                    <li><a href="https://wetransfer.com/explore/corporate/awards">Ödüller</a></li>
+                                    <li><a href="https://wetransfer.com/blog/newsroom">Haber Odası</a>
                                     </li>
                                 </ul>
                                 <ul>
@@ -113,14 +116,14 @@
                                         <h5>ADVERTISING</h5>
                                     </li>
                                     <li>
-                                        <a href="https://wetransfer.com/explore/photographers?sp=false">Bize Reklam
+                                        <a href="https://wetransfer.com/explore/advertising">Bize Reklam
                                             Verin
                                         </a>
                                     </li>
-                                    <li><a href="https://wetransfer.com/explore/videographers?sp=false">Sorumlu
+                                    <li><a href="https://wetransfer.com/explore/advertising/responsible">Sorumlu
                                             Uygulamalar</a>
                                     </li>
-                                    <li><a href="https://wetransfer.com/explore/designers-illustrators?sp=false">Reklam
+                                    <li><a href="https://wetransfer.com/explore/advertising/policies">Reklam
                                             Poltikaları</a>
                                     </li>
 
@@ -130,13 +133,15 @@
                                         <h5>DAHA FAZLASI</h5>
                                     </li>
                                     <li>
-                                        <a href="https://wetransfer.com/explore/photographers?sp=false">We present
+                                        <a
+                                            href="https://wepresent.wetransfer.com/https://wetransfer.com/explore/photographers?sp=false">We
+                                            present
                                         </a>
                                     </li>
-                                    <li><a href="https://wetransfer.com/explore/videographers?sp=false">Blog</a>
-                                    </li>
                                     <li><a
-                                            href="https://wetransfer.com/explore/designers-illustrators?sp=false">Yardım</a>
+                                            href="https:https://wetransfer.com/blog/wetransfer.com/explore/videographers?sp=false">Blog</a>
+                                    </li>
+                                    <li><a href="https://help.wetransfer.com/hc/en-us">Yardım</a>
                                     </li>
 
 
@@ -148,7 +153,7 @@
                 </div>
 
 
-                <div class="nav-menu nav-menu-1">
+                <div class="nav-desktop-menu nav-desktop-menu-1">
                     <!-- Giriş Yap/ Kaydol -->
                     <p>Giriş yap</p>
                     <p id="register">Kaydol</p>
@@ -159,6 +164,31 @@
 
     </nav>
 
+    <!-- Nav Mobile -->
+    <nav id="nav-mobile">
+
+        <div>
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div>
+            <!-- WeTransfer Icons -->
+
+            <a href="https://wetransfer.com/" title="WeTransfer.com">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="20" fill="none" class="icon">
+                    <path fill="currentColor" fill-rule="evenodd"
+                        d="M12.23 15.014c-.383-.605-.697-.926-1.254-.926-.558 0-.872.32-1.255.926L8.05 17.686c-.627 1.032-1.15 1.745-2.37 1.745s-1.777-.499-2.369-1.888a42.3 42.3 0 0 1-2.195-6.554C.348 7.89 0 5.967 0 4.4s.488-2.493 2.16-2.813c2.3-.428 5.401-.677 8.816-.677 3.414 0 6.515.25 8.815.677 1.672.32 2.16 1.246 2.16 2.814 0 1.567-.348 3.49-1.115 6.59a42.3 42.3 0 0 1-2.195 6.553c-.592 1.39-1.15 1.888-2.37 1.888-1.219 0-1.741-.713-2.369-1.745zm26.516 2.5c-1.185 1.282-3.415 2.208-6.342 2.208-5.888 0-9.373-4.096-9.373-9.474 0-5.77 4.007-9.19 9.199-9.19 4.634 0 7.7 2.458 7.7 5.77 0 3.135-2.613 5.165-5.575 5.165-1.602 0-2.787-.32-3.588-.961-.314-.25-.488-.214-.488.071 0 1.175.418 2.173 1.184 2.956.628.641 1.812 1.069 2.927 1.069 1.15 0 2.16-.25 3.066-.713s1.673-.32 2.126.428c.523.855-.21 1.959-.836 2.671"
+                        clip-rule="evenodd">
+                    </path>
+                </svg>
+            </a>
+        </div>
+
+        <div>
+            <p>Kaydol</p>
+        </div>
+
+
+    </nav>
     <section>
         <div class="section-left-wrapper">
             <div id="section-left">
