@@ -10,6 +10,15 @@
   --fluid-width: 90vw;
 }
 
+a {
+  text-decoration: none;
+  color: #353535;
+}
+
+ul {
+  list-style: none;
+}
+
 body {
   position: relative;
   height: 100%;
@@ -183,7 +192,8 @@ body::after {
   opacity: 0.7;
 }
 
-.fa-chevron-down {
+.fa-chevron-down,
+.fa-chevron-up {
   font-size: 0.75rem;
 }
 
@@ -214,7 +224,7 @@ section {
 #section-left {
   background-color: #f1f1f1;
   border-radius: 0.8rem;
-  opacity: 0.75;
+  opacity: 0.85;
   width: 18rem;
 }
 
@@ -342,39 +352,6 @@ section {
     height: 100vh; /* Ensures the body covers the full viewport height */
     overflow: hidden; /* Prevents scrollbars from appearing */
   }
-  #nav-desktop {
-    display: none;
-  }
-
-#nav-mobile {
-  background-color: #f1f1f1;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.5rem 1rem;
-}
-
-
-
-/* Menü ikonu ve WeTransfer logosu */
-.icon {
-  color: #0f0f0f;
-  font-size: 24px;
-  margin-left: 0.8rem;
-}
-
-
-  section {
-    grid-template-columns: 1fr;
-    width: 100%;
-    max-width: 100%;
-    justify-items: center;
-    padding: 1rem; /* Kenarlık alanını azalt */
-  }
-
-  .section-right-wrapper {
-    display: none;
-  }
 
   body::after {
     background-image: url(./images/forest.jpeg);
@@ -383,5 +360,64 @@ section {
     background-repeat: no-repeat;
     opacity: 0.35;
     background-attachment: fixed; /* Keeps the image fixed on mobile */
+  }
+  #nav-desktop {
+    display: none;
+  }
+
+  #nav-mobile {
+    background-color: #f1f1f1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+  }
+
+  .mobile-nav-menu {
+    background-color: #f1f1f1;
+    min-width: 20rem;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 6px 10px;
+    z-index: 1;
+    border-radius: 0.8rem;
+    margin-top: 1.3rem;
+    z-index: 1;
+    transition: all 0.3s;
+  }
+
+  .mobile-nav-menu-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+  }
+
+  .mobile-nav-menu-lists {
+    display: none;
+  }
+
+  .mobile-nav-menu-area.active .mobile-nav-menu-lists {
+    display: block;
+  }
+
+  .icon {
+    color: #0f0f0f;
+    font-size: 24px;
+    margin-left: 0.8rem;
+  }
+
+  section {
+    grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+  }
+  #section-left {
+    opacity: 0.85;
+    z-index: -1;
+  }
+
+  .section-right-wrapper {
+    display: none;
   }
 }
