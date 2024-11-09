@@ -46,7 +46,7 @@ html {
 
   /* Border Radius */
   --border-radius-xs: 0.4rem;
-  --border-radius-sm:0.6rem;
+  --border-radius-sm: 0.6rem;
   --border-radius-md: 0.8rem;
 
   /* Transitions */
@@ -76,22 +76,14 @@ html {
   --padding-extra-large: 15px 20px;
 }
 
-a {
-  text-decoration: none;
-  color: #353535;
-}
-
-ul {
-  list-style: none;
-}
-
 body {
   position: relative;
-  height: 100%;
+  margin: 0;
+  height: 100vh;
   background-color: var(--color-aqua);
   font-family: "GT Super WT", "Segoe UI", "Roboto", "Arial", "Helvetica Neue",
     "Lucida Grande", sans-serif;
-  overflow: auto;
+  overflow: hidden;
 }
 
 body::after {
@@ -101,6 +93,8 @@ body::after {
   left: 0;
   right: 0;
   bottom: 0;
+  height: 100%;
+  width: 100%;
   background-image: url(./images/forest.jpeg);
   background-size: cover;
   background-position: center;
@@ -109,11 +103,23 @@ body::after {
   z-index: -1;
 }
 
-#nav-desktop {
-  height: 6rem;
+a {
+  text-decoration: none;
+  color: var(--color-black-100);
+}
+
+ul {
+  list-style: none;
+}
+
+.center-element {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+#nav-desktop {
+  height: 6rem;
 }
 
 #nav-mobile {
@@ -145,7 +151,7 @@ body::after {
 }
 
 .nav-desktop-menu-1 p {
-  padding: 14px 0 14px 24px;
+  padding: var(--padding-large-left);
   font-size: var(--font-size-xs);
 }
 
@@ -289,12 +295,6 @@ section {
   margin: 0 auto;
 }
 
-.section-left-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 #section-left {
   background-color: var(--color-white-100);
   border-radius: var(--border-radius-md);
@@ -311,9 +311,6 @@ section {
   width: 50px;
   height: 50px;
   border-radius: 1.12rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .icon-1 {
   color: var(--color-white);
@@ -344,7 +341,7 @@ section {
 }
 
 .section-right-wrapper {
-  height: 80vh;
+  height: 75vh;
   overflow-y: auto;
   scrollbar-width: none;
 }
@@ -477,10 +474,10 @@ section {
   }
 
   #nav-mobile {
-    background-color: var(--color-white);
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: var(--color-white);
     padding: var(--padding-medium-wide);
   }
 
@@ -501,11 +498,11 @@ section {
 
   .mobile-nav-menu-items {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     z-index: 1;
     font-size: var(--font-size-xs);
-    color:var(--color-black-100);
+    color: var(--color-black-100);
     transition: var(--transition-fast);
   }
 
@@ -544,7 +541,6 @@ section {
   }
   #section-left {
     opacity: var(--opacity-high);
-    /* z-index: -1; */
   }
 
   .section-right-wrapper {
