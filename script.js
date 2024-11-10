@@ -54,13 +54,68 @@ document.addEventListener("click", (event) => {
 });
 
 function managePreference() {
-  const managePreferen = document.querySelector("#manage-preference")
+  const managePreferen = document.querySelector("#manage-preference");
   const textTwo = document.querySelector(".text-2");
   const textThree = document.querySelector(".text-3");
   const test = document.querySelector("#manage-preference p");
 
-managePreferen.classList.add("active")
+  managePreferen.classList.add("active");
   textTwo.style.display = "none";
   textThree.style.display = "none";
-  test.style.display="block"
+  test.style.display = "block";
+}
+const itemOptions = document.querySelectorAll(".item-option");
+const purposes = document.querySelector("#purposes");
+const features = document.querySelector("#feature");
+const sellers = document.querySelector("#sellers");
+
+itemOptions.forEach((item) => {
+      purposes.style.display = "flex";
+      features.style.display = "none";
+      sellers.style.display = "none";
+  item.addEventListener("click", () => {
+    removeItemOptions();
+    item.classList.add("active");
+
+    if (item.classList.contains("active")) {
+      if (item.textContent === "Amaçlar") {
+      purposes.style.display="flex"
+      features.style.display="none"
+      sellers.style.display = "none";
+        // purposes.classList.add("content-options-active");
+        // purposes.classList.remove("content-options-inactive");
+        // sellers.classList.add("content-options-inactive");
+        // sellers.classList.remove("content-options-active");
+        // features.classList.remove("content-options-active");
+        // features.classList.add("content-options-inactive");
+      } else if (item.textContent === "Özellikler") {
+        // purposes.classList.remove("content-options-active");
+        // purposes.classList.add("content-options-inactive");
+        // features.classList.add("content-options-active");
+        // features.classList.remove("content-options-inactive");
+        // sellers.classList.add("content-options-inactive");
+        // sellers.classList.remove("content-options-active");
+           purposes.style.display = "none";
+           features.style.display = "flex";
+           sellers.style.display = "none";
+      } else {
+        // purposes.classList.remove("content-options-active");
+        // purposes.classList.add("content-options-inactive");
+        // features.classList.remove("content-options-active");
+        // features.classList.add("content-options-inactive");
+        // sellers.classList.remove("content-options-inactive");
+        // sellers.classList.add("content-options-active");
+            purposes.style.display = "none";
+            features.style.display = "none";
+            sellers.style.display = "flex";
+      }
+    }
+  });
+});
+
+
+function removeItemOptions() {
+  itemOptions.forEach((item) => {
+    item.classList.remove("active");
+  });
 }
