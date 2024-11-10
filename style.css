@@ -419,6 +419,50 @@ section {
   font-weight: var(--font-weight-semibold);
 }
 
+.content-options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-options-items {
+  width: min-content;
+  /* gap: var(--spacing-sm); */
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: var(--padding-medium); */
+  border: 1px solid var(--color-white-300);
+  border-radius: var(--border-radius-xs);
+}
+
+.item-option {
+  font-size: var(--font-size-sm);
+  color: var(--color-white);
+  font-weight: var(--font-weight-semibold);
+  padding: 8px;
+  border-right: 1px solid var(--color-white);
+}
+
+.item-option:first-of-type,
+.item-option:nth-last-of-type(1) {
+  border-right: none;
+}
+
+.item-option.active {
+  color: #353535;
+  background-color: var(--color-white);
+}
+
+.item-option.active:first-of-type {
+  border-top-left-radius: var(--border-radius-xs);
+  border-bottom-left-radius: var(--border-radius-xs);
+}
+.item-option.active:nth-last-of-type(1) {
+  border-top-right-radius: var(--border-radius-xs);
+  border-bottom-right-radius: var(--border-radius-xs)
+}
 @media (min-width: 768px) and (max-width: 992px) {
   .nav-desktop-menu {
     gap: 0.65rem;
