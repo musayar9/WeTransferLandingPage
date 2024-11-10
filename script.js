@@ -52,3 +52,15 @@ document.addEventListener("click", (event) => {
     iconThree.classList.add("fa-bars");
   }
 });
+
+function managePreference() {
+  const managePreferen = document.querySelector("#manage-preference")
+  const textTwo = document.querySelector(".text-2");
+  const textThree = document.querySelector(".text-3");
+  const test = document.querySelector("#manage-preference p");
+
+managePreferen.classList.add("active")
+  textTwo.style.display = "none";
+  textThree.style.display = "none";
+  test.style.display="block"
+}

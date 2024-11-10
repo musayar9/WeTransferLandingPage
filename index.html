@@ -38,7 +38,7 @@
                         <span>Özellikler</span>
                         <i class="fa-solid fa-chevron-down"></i>
                         <div class="dropdown-content">
-                            <ul class="feature-lists">
+                            <ul class="lists feature-lists">
                                 <li>
                                     <a href="https://wetransfer.com/tr-TR/explore/file-sharing?sp=false">Dosyalarınızı
                                         Paylaşın
@@ -69,7 +69,7 @@
                         <span>Örnekleri Kullanın</span>
                         <i class="fa-solid fa-chevron-down"></i>
                         <div class="dropdown-content">
-                            <ul class="feature-lists">
+                            <ul class="lists feature-lists">
                                 <li>
                                     <a href="https://wetransfer.com/explore/photographers?sp=false">Fotoğrafçılar için
                                     </a>
@@ -92,7 +92,7 @@
 
 
 
-                            <div class="source-lists">
+                            <div class="lists source-lists ">
                                 <ul>
                                     <li>
                                         <h5 class="text-blue">HAKKIMIZDA</h5>
@@ -253,7 +253,7 @@
     </nav>
 
     <!-- Nav Mobile -->
-    <nav id="nav-mobile" >
+    <nav id="nav-mobile">
 
         <div class="dropdown-mobile" onclick="dropdownMenu()">
             <i class="fa-solid fa-bars icon-3"></i>
@@ -463,7 +463,7 @@
                     </p>
 
 
-                    <p>
+                    <p class="text-2">
                         Sitemizin çalışmasını sağlamak, trafiği analiz etmek ve hizmetlerimizi geliştirmek için gerekli
                         olan
                         çerezleri ve diğer
@@ -479,17 +479,40 @@
                         izni
                         reddedebilirsiniz.
                     </p>
-                    <p>
+                    <p class="text-3">
                         Bu amaçlar ve ortaklarımız hakkında daha fazla bilgi edinmek veya tercihlerinizi uygulamak için
                         aşağıdaki "Tercihleri
                         Yönet" düğmesine tıklayın. Bu seçimler ortaklarımıza iletilecek ve tarama deneyiminizi
                         etkilemeyecektir. Gizlilik
                         Merkezini ziyaret ederek istediğiniz zaman izni geri çekebilirsiniz.</p>
                 </div>
+                <div id="manage-preference">
+                    <div class="manage-preference-content">
+                        <div >
+                            <p class="text">Sitemizin çalışmasını sağlamak, trafiği analiz etmek ve hizmetlerimizi geliştirmek için
+                                gerekli olan çerezleri ve diğer
+                                teknolojileri kullanıyoruz. Gizlilik Bildirimimizi okuyarak daha fazla bilgi
+                                edinebilirsiniz. "Tümünü kabul et"
+                                seçeneğine tıklayarak, bize ve 61 satıcılarımıza cihazınızdaki bilgileri saklamamıza
+                                ve/veya cihazınızdaki bilgilere
+                                erişmemize ve web sitelerimiz ve uygulamalarımız içinde ve dışında kişiselleştirilmiş
+                                reklam ve içerik sunmak için IP
+                                adresi gibi kişisel verilerinizi kullanmamıza ve reklamların ve içeriğin etkinliğini
+                                ölçmemize, hedef kitle araştırması
+                                yaparak hizmetler geliştirmemize izin vermiş olursunuz. "Tümünü reddet" seçeneğine
+                                tıklayarak izni reddedebilirsiniz. Bu
+                                amaçlar ve ortaklarımız hakkında daha fazla bilgi edinmek veya tercihlerinizi uygulamak
+                                için aşağıdaki "Tercihleri
+                                Yönet" düğmesine tıklayın. Bu seçimler ortaklarımıza iletilecek ve tarama deneyiminizi
+                                etkilemeyecektir. Gizlilik
+                                Merkezini ziyaret ederek istediğiniz zaman izni geri çekebilirsiniz.</p>
+                        </div>
+                    </div>
+                </div>
                 <div class="right-button-container">
-                    <button class="button-1">Tümünü Kabul Et</button>
-                    <button class="button-2">Tümünü Reddet</button>
-                    <button class="button-3">Tercihleri Yönet</button>
+                    <button class="btn btn-1">Tümünü Kabul Et</button>
+                    <button class="btn btn-2">Tümünü Reddet</button>
+                    <button class="btn-3" onclick="managePreference()">Tercihleri Yönet</button>
 
                 </div>
             </div>
