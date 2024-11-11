@@ -182,20 +182,44 @@ function togglePermission(index) {
 
     if (purpoIndex === String(index)) {
       purpoArea.classList.toggle("active");
-    
-    if(purpoArea.classList.contains("active")){
-            icon.classList.add("fa-chevron-up");
-            icon.classList.remove("fa-chevron-down");
-    }else{
-     icon.classList.remove("fa-chevron-up");
-     icon.classList.add("fa-chevron-down");
-    }
-    }else{
-     purpoArea.classList.remove("active");
 
-     const otherIcon = purpoArea.querySelector(".icon-2");
-     otherIcon.classList.remove("fa-chevron-up");
-     otherIcon.classList.add("fa-chevron-down");
+      if (purpoArea.classList.contains("active")) {
+        icon.classList.add("fa-chevron-up");
+        icon.classList.remove("fa-chevron-down");
+      } else {
+        icon.classList.remove("fa-chevron-up");
+        icon.classList.add("fa-chevron-down");
+      }
+    } else {
+      purpoArea.classList.remove("active");
+
+      const otherIcon = purpoArea.querySelector(".icon-2");
+      otherIcon.classList.remove("fa-chevron-up");
+      otherIcon.classList.add("fa-chevron-down");
+    }
+  });
+}
+// toggle sellersfun
+
+function toggleSellers(index) {
+  const sellersArea = document.querySelectorAll(".sellers-list-area");
+  sellersArea.forEach((sellers) => {
+    const sellersIndex = sellers.getAttribute("data-index");
+    const icon = sellers.querySelector(".icon-2");
+    if (sellersIndex === String(index)) {
+      sellers.classList.toggle("active");
+      if (sellers.classList.contains("active")) {
+        icon.classList.add("fa-chevron-up");
+        icon.classList.remove("fa-chevron-down");
+      } else {
+        icon.classList.remove("fa-chevron-up");
+        icon.classList.add("fa-chevron-down");
+      }
+    } else {
+      sellers.classList.remove("active");
+      const otherIcon = sellers.querySelector(".icon-2");
+      otherIcon.classList.remove("fa-chevron-up");
+      otherIcon.classList.add("fa-chevron-down");
     }
   });
 }
