@@ -120,6 +120,37 @@ purposesItem.forEach((purpose) => {
   });
 });
 
+// satıcılar izin ve meşru müdafa kontorlü;
+const sellersItem = document.querySelectorAll(".sellers-item");
+const sellersPermission = document.querySelector("#sellers-permission");
+const sellersLegitimateInterest = document.querySelector(
+  "#sellers-legitimate-interest"
+);
+const allSellersCheckbox = document.querySelectorAll(".sellers-checkbox");
+sellersItem.forEach((sellers) => {
+  sellersLegitimateInterest.style.display = "none";
+  sellers.addEventListener("click", () => {
+    sellersRemoveActive();
+    sellers.classList.add("active");
+
+    if (sellers.classList.contains("active")) {
+      if (sellers.textContent === "İzin") {
+        sellersLegitimateInterest.style.display = "none";
+        sellersPermission.style.display="block"
+        allSellersCheckbox.forEach((check) => {
+          check.removeAttribute("checked");
+        });
+      } else {
+        sellersPermission.style.display = "none";
+        sellersLegitimateInterest.style.display = "block";
+        allSellersCheckbox.forEach((check) => {
+          check.setAttribute("checked", true);
+        });
+      }
+    }
+  });
+});
+
 function removeItemOptions() {
   itemOptions.forEach((item) => {
     item.classList.remove("active");
@@ -129,5 +160,11 @@ function removeItemOptions() {
 function purposesRemoveActive() {
   purposesItem.forEach((purpose) => {
     purpose.classList.remove("active");
+  });
+}
+
+function sellersRemoveActive() {
+  sellersItem.forEach((sellers) => {
+    sellers.classList.remove("active");
   });
 }
