@@ -171,3 +171,31 @@ function sellersRemoveActive() {
     sellers.classList.remove("active");
   });
 }
+
+///tpggle persmiison
+
+function togglePermission(index) {
+  const purposesArea = document.querySelectorAll(".purposes-list-area");
+  purposesArea.forEach((purpoArea) => {
+    const purpoIndex = purpoArea.getAttribute("data-index");
+    const icon = purpoArea.querySelector(".icon-2");
+
+    if (purpoIndex === String(index)) {
+      purpoArea.classList.toggle("active");
+    
+    if(purpoArea.classList.contains("active")){
+            icon.classList.add("fa-chevron-up");
+            icon.classList.remove("fa-chevron-down");
+    }else{
+     icon.classList.remove("fa-chevron-up");
+     icon.classList.add("fa-chevron-down");
+    }
+    }else{
+     purpoArea.classList.remove("active");
+
+     const otherIcon = purpoArea.querySelector(".icon-2");
+     otherIcon.classList.remove("fa-chevron-up");
+     otherIcon.classList.add("fa-chevron-down");
+    }
+  });
+}
