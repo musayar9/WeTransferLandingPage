@@ -151,7 +151,7 @@ ul {
   gap: var(--spacing-xs);
 }
 
-.nav-desktop-menu-1 p {
+.nav-desktop-menu-1 p{
   padding: var(--padding-large-left);
   font-size: var(--font-size-xs);
 }
@@ -261,12 +261,14 @@ ul {
   font-size: var(--font-size-xss);
 }
 
-#register {
+.register {
   color: var(--color-white-100);
   background-color: var(--color-black-100);
-  margin: 2px;
+margin-right:8px ;
+margin-left: -16px;
   padding: var(--padding-small);
   border-radius: var(--border-radius-xs);
+  
 }
 
 section {
