@@ -603,6 +603,7 @@ input:checked + .slider:before {
   color: var(--color-white-100);
   padding: var(--padding-small);
   display: flex;
+  flex-direction: column;
 }
 
 .purposes-list-area.active::before {
@@ -615,6 +616,24 @@ input:checked + .slider:before {
   background-color: rgba(53, 53, 53, 0.3);
   border-radius: var(--border-radius-sm);
   z-index: -1;
+}
+.content-detail-area{
+display: flex;
+flex-direction: column;
+}
+
+.content-detail-item{
+  background-color: rgba(53, 53, 53, 0.3);
+  border-radius: var(--border-radius-sm);
+  z-index: -1;
+  padding: var(--padding-small);
+  margin: 10px 0;
+}
+
+.detail-item{
+display: flex;
+justify-content: space-between;
+align-items: center;
 }
 
 .sellers-right {
@@ -631,6 +650,7 @@ input:checked + .slider:before {
   font-size: var(--font-size-xxs);
 }
 
+.detail-item-status,
 .sellers-list-status {
   margin: 5px;
   gap: var(--spacing-xs);
