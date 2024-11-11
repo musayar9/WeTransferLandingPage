@@ -377,7 +377,8 @@ section {
   background-color: var(--color-blue-100);
 }
 
-.btn-2 {
+.btn-2,
+.save-btn {
   background: transparent;
   border: 1px solid var(--color-white-100);
 }
@@ -394,6 +395,7 @@ section {
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-semibold);
   text-decoration: underline;
+  cursor: pointer;
 }
 
 #manage-preference {
@@ -477,7 +479,6 @@ section {
   cursor: pointer;
 }
 
-
 .item-option:nth-last-of-type(1) {
   border-right: none;
 }
@@ -508,7 +509,7 @@ section {
   display: none;
 }
 
-/* Switchin genel stili */
+
 .switch {
   position: relative;
   display: inline-block;
@@ -516,12 +517,12 @@ section {
   height: 24px;
 }
 
-/* Checkbox’ı gizle */
+
 .switch input {
   display: none;
 }
 
-/* Slider (açma/kapama görünümü) */
+
 .slider {
   position: absolute;
   cursor: pointer;
@@ -534,7 +535,7 @@ section {
   border-radius: 24px;
 }
 
-/* Slider içindeki yuvarlak */
+
 .slider:before {
   position: absolute;
   content: "";
@@ -580,7 +581,7 @@ input:checked + .slider:before {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(53, 53, 53, 0.3); /* Saydam arka plan */
+  background-color: rgba(53, 53, 53, 0.3); 
   border-radius: var(--border-radius-sm);
   z-index: -1;
 }
@@ -619,13 +620,26 @@ input:checked + .slider:before {
   color: var(--color-white);
 }
 
+#sea-trees {
+  position: relative;
+}
 
+.sea-trees-text {
+  position: fixed;
+  right: 0; 
+  bottom: 0;
+  padding: var(--padding-extra-large);
+  color: var(--color-white);
+  font-size: var(--font-size-sm);
+}
+
+  /* For Medium Screens */
 @media (min-width: 768px) and (max-width: 992px) {
   .nav-desktop-menu {
     gap: 0.65rem;
   }
 
-  /* Medium ekranlar için özel stiller buraya */
+
   #sources,
   #examples_use {
     display: none;
@@ -656,20 +670,15 @@ input:checked + .slider:before {
   }
 }
 
+
+/* For Mobile Screens */
 @media (max-width: 768px) {
   body {
     height: 100vh;
-    overflow: hidden; /* Prevents scrollbars from appearing */
+    overflow: hidden; 
   }
 
-  body::after {
-    background-image: url(./images/forest.jpeg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: var(--opacity-low);
-    background-attachment: fixed; /* Keeps the image fixed on mobile */
-  }
+
   #nav-desktop {
     display: none;
   }
