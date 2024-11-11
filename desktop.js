@@ -145,7 +145,7 @@ const allSellersCheckbox = document.querySelectorAll(".sellers-checkbox");
 sellersItem.forEach((sellers) => {
   sellersLegitimateInterest.style.display = "none";
   sellers.addEventListener("click", () => {
-    removeActiveControllers(sellers);
+    sellersRemoveActive();
     sellers.classList.add("active");
 
     if (sellers.classList.contains("active")) {
