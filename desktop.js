@@ -172,7 +172,19 @@ function sellersRemoveActive() {
   });
 }
 
-///tpggle persmiison
+/*
+ * - Amaçlar ve Özellikler menüsündeki her bir öğenin genişletilip daraltılmasını sağlar:
+ *   - Tıklanan öğeye "active" sınıfını ekleyerek açar, tekrar tıklandığında "active" sınıfını kaldırarak kapatır.
+ *   - Tıklanan öğe hariç diğer tüm öğelerden "active" sınıfını kaldırır.
+ *   - Eğer tıklanan öğe açıksa, simge olarak "fa-chevron-up" gösterilir, kapalıysa "fa-chevron-down" simgesi gösterilir.
+ *   - Diğer öğelerde ise her zaman "fa-chevron-down" simgesi görünür.
+ *
+ * - Allows expanding and collapsing each item in the "Purposes" and "Features" menu:
+ *   - Adds the "active" class to the clicked item to expand it, removes it to collapse when clicked again.
+ *   - Removes the "active" class from all other items except the clicked one.
+ *   - If the clicked item is expanded, it shows the "fa-chevron-up" icon; otherwise, it shows "fa-chevron-down."
+ *   - For other items, the "fa-chevron-down" icon is always displayed.
+ */
 
 function togglePermission(index) {
   const purposesArea = document.querySelectorAll(".purposes-list-area");
@@ -199,7 +211,20 @@ function togglePermission(index) {
     }
   });
 }
-// toggle sellersfun
+/*
+ * - Satıcılar menüsündeki her bir öğenin genişletilip daraltılmasını sağlar:
+ *   - Tıklanan öğeye "active" sınıfını ekleyerek açar, tekrar tıklandığında "active" sınıfını kaldırarak kapatır.
+ *   - Tıklanan öğe hariç diğer tüm öğelerden "active" sınıfını kaldırır.
+ *   - Eğer tıklanan öğe açıksa, simge olarak "fa-chevron-up" gösterilir, kapalıysa "fa-chevron-down" simgesi gösterilir.
+ *   - Diğer öğelerde ise her zaman "fa-chevron-down" simgesi görünür.
+ *
+ * - Allows expanding and collapsing each item in the Sellers menu:
+ *   - Adds the "active" class to the clicked item to expand it, removes it to collapse when clicked again.
+ *   - Removes the "active" class from all other items except the clicked one.
+ *   - If the clicked item is expanded, it shows the "fa-chevron-up" icon; otherwise, it shows "fa-chevron-down."
+ *   - For other items, the "fa-chevron-down" icon is always displayed.
+ */
+
 
 function toggleSellers(index) {
   const sellersArea = document.querySelectorAll(".sellers-list-area");

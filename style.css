@@ -369,6 +369,7 @@ section {
   border-radius: var(--border-radius-xs);
   font-weight: var(--font-weight-medium);
   font-size: var(--font-size-xs);
+  width:10rem;
 }
 .btn-1 {
   background-color: var(--color-blue);
@@ -398,6 +399,7 @@ section {
   text-decoration: underline;
   cursor: pointer;
 }
+
 
 #manage-preference {
   display: none;
